@@ -1,0 +1,20 @@
+<div id="mySidenav" class="sidenav">
+  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" style="color:white" fill="currentColor" class="bi bi-braces-asterisk icon" viewBox="0 0 16 16">
+    <path d="M7.5 1.063v9.556L6 8.819V3a2 2 0 0 1 1.5-1.937ZM8 0a3 3 0 0 0-3 3v6a.5.5 0 0 0 .116.32L7.5 12.181V15.5a.5.5 0 0 0 1 0v-3.319l2.384-2.86A.5.5 0 0 0 11 9V3a3 3 0 0 0-3-3Zm.5 1.063A2 2 0 0 1 10 3v.293l-1.5 1.5v-3.73ZM10 4.707V8.82l-1.5 1.8V6.207l1.5-1.5Z"/>
+  </svg><br><br><br>
+  <a routerLink="/user/home">Home</a>
+  <a routerLink="/user/library">My Collection</a>
+  <a routerLink="/user/bookstore">Google Book</a>
+  <a routerLink="/user/book-list">Book ISBN Numbers</a>
+  <a routerLink="/user/profile">Profile</a>
+  <button type="button" class="btn btn-success logout-btn-style" (click)="logout()">LogOut</button>
+<!--  routerLink="/login"-->
+</div>
+
+
+
+<div class="data-page-style">
+  <h3>@{{userDetails.userName}}</h3>
+
+  <router-outlet></router-outlet>
+</div>

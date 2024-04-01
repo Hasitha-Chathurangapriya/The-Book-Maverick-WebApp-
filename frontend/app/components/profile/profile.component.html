@@ -1,0 +1,51 @@
+<div class="card login-style" >
+  <div class="card-body">
+
+    <span *ngIf="pageType == 'edit'">
+      <h3>User Account</h3>
+    </span>
+    <span *ngIf="pageType == 'new'">
+      <h3>User Account</h3>
+    </span>
+
+    <form [formGroup]="newUserForm">
+
+      <div class="d-flex justify-content-around">
+        <div style="width: 98%">
+          <label  class="form-label">User Name</label>
+          <input type="text" class="form-control" rows="1" placeholder="User Name" formControlName="userName">
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-around">
+        <div style="width: 98%">
+          <label  class="form-label">Password</label>
+          <input type="password" class="form-control" rows="1" placeholder="!12Hasitha" formControlName="password">
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-around">
+        <div style="width: 98%">
+          <label  class="form-label">Status</label>
+          <input type="text" class="form-control" rows="1" placeholder="status" formControlName="status">
+        </div>
+      </div>
+
+      <div>
+        <button class="btn btn-dark save-btn"  (click)="savaData() " [disabled]="!isValid() || !isDirty()">
+          <p *ngIf="pageType == 'edit'">
+            Update
+          </p>
+          <p *ngIf="pageType == 'new'">
+            Save
+          </p>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+
+

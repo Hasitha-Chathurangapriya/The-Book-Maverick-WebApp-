@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-body">
+
+    <div class="main">
+      <button class="btn btn-success " type="button" (click)="addISBN()">
+       Add New ISBN
+      </button>
+    </div>
+    <table class="table table-striped table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Book ISBN Number</th>
+        <th scope="col">Book Name</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let isbn of isbns">
+        <td scope="row">{{isbn.isbnNumber}}</td>
+        <td>{{isbn.bookName}}</td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
